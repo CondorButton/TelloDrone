@@ -5,10 +5,15 @@ Professor Chafic Bou-Saba
 
 ## Goals
 Remote connection to Tello drone via Raspberry Pi and VNC connection. The drone is equipped with a 720p front facing camera, 2 vertical-axis IR sensors, and rotor guards for each of the 4 propellors.
+
 The drone can be queried for frames from the video stream. The frames are individually processed for facial and gesture detection. Based on the python logic, commands are returned to the drone.
+
 Commands can be sent to the drone in the form: \[Right(+)/Left(-), Forward(+)/Backward(-), Up(+)/Down(-), Clockwise(+)/C-Clockwise(-)], where each element of the array is an integer, denoting the speed of the movement.
+
 The code will then run a thread sleep command for a predetermined amount of time to allow the drone to move before accepting further commands.
+
 **ImageControl** displays the live image from the drone and allows user input to actively influence the speed, direction, and height of the drone. This extends the **KeyPressModule** and a *pygame* window for user input.
+
 **ObjectTracking** sets the framework for facial object detection, using one of the [haar cascade](https://www.murtazahassan.com/wp-content/uploads/2020/03/haarcascades.zip) files available online.
 
 ## Dependencies
