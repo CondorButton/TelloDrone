@@ -1,6 +1,8 @@
 # TelloDrone
 Guilford College Capstone Project - Connor Button and Eric Eaves
+
 Spring 2021
+
 Professor Chafic Bou-Saba
 
 ## Goals
@@ -20,24 +22,34 @@ The code will then run a thread sleep command for a predetermined amount of time
 Python 3.7
 
 Module Dependencies
--pip : 19.2.3
--numpy : 1.20.1
--opencv-python : 4.5.1.48
--pygame : 2.0.1
--setuptools : 41.2.0
--djitellopy : 1.5
+..* pip : 19.2.3
+
+* numpy : 1.20.1
+
+* opencv-python : 4.5.1.48
+
+* pygame : 2.0.1
+
+* setuptools : 41.2.0
+
+* djitellopy : 1.5
 
 Hardware
--DJI Tello EDU Drone
--Raspberry Pi 4 Model B
+* DJI Tello EDU Drone
+
+* Raspberry Pi 4 Model B
 
 Software
--Development IDE : PyCharm (PC), Thonny (PI)
--RealVNC
--Rasbian OS
+* Development IDE : PyCharm (PC), Thonny (PI)
+
+* RealVNC
+
+* Rasbian OS
 
 Other Requirements
--Internet Connection
--Ethernet for Pi
--Open Space
+* Internet Connection
+
+* Ethernet for Pi
+
+* Open Space
 
