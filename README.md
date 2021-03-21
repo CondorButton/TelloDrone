@@ -21,7 +21,7 @@ The code will then run a thread sleep command for a predetermined amount of time
 ## Dependencies
 Python 3.7
 
-Module Dependencies
+### Module Dependencies
 ..* pip : 19.2.3
 
 * numpy : 1.20.1
@@ -34,19 +34,19 @@ Module Dependencies
 
 * djitellopy : 1.5
 
-Hardware
+### Hardware
 * DJI Tello EDU Drone
 
 * Raspberry Pi 4 Model B
 
-Software
+### Software
 * Development IDE : PyCharm (PC), Thonny (PI)
 
 * RealVNC
 
 * Rasbian OS
 
-Other Requirements
+### Other Requirements
 * Internet Connection
 
 * Ethernet for Pi
