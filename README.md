@@ -22,7 +22,7 @@ The code will then run a thread sleep command for a predetermined amount of time
 Python 3.7
 
 ### Module Dependencies
-..* pip : 19.2.3
+* pip : 19.2.3
 
 * numpy : 1.20.1
 
