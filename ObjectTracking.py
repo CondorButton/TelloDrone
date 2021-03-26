@@ -11,32 +11,10 @@ me.takeoff()
 me.send_rc_control(0, 0, 25, 0)
 time.sleep(0.5)
 
-# ##### PARAMETERS #####
-# fspeed = 117/10 #Forward Speed, cm/s  #tune-able
-# aspeed = 360/10 #Angular Speed Deg/s  #tune-able
-# interval = 0.25
-# dInterval = fspeed*interval
-# aInterval = aspeed*interval
-# #############################
-# xMap, yMap = 500, 500
-# a = 0
-# yaw = 0
-#
 w,h = 360, 240
 fbRange = [6200, 6800]
 pid = [0.4, 0.4, 0] #tune-able
 pError = 0
-
-# points = [(0,0), (0,0)]
-
-# #Movement Mapping Code
-# def drawPoints(img, points):
-#     for point in points:
-#         cv2.circle(img, point, 5, (0, 0, 255), cv2.FILLED)
-#
-#     cv2.circle(img, points[-1], 8, (0, 255, 0), cv2.FILLED)
-#     cv2.putText(img, f'({(points[-1][0]-500)/100}, {(points[-1][1]-500)/100})m',
-#                 (points[-1][0] + 10, points[-1][1] + 30), cv2.FONT_HERSHEY_PLAIN, 1, (255, 0, 255), 1)
 
 #Facial Detection Code
 def findFace(img):
@@ -46,8 +24,6 @@ def findFace(img):
 
     FaceListC = []
     FaceListArea = []
-
-    # global xMap, yMap
 
     for (x, y, w, h) in faces:
         cv2.rectangle(img, (x, y), (x + w, y + h), (0, 0, 255), 2)
@@ -87,31 +63,13 @@ def trackFace(me, info, w, pid, pError):
     me.send_rc_control(0, fb, 0, speed)
     return error, [fb, speed, x, y]
 
-#cap = cv2.VideoCapture(1)
-
 while True:
     #_, img = cap.read()
     img = me.get_frame_read().frame
     img = cv2.resize(img, (w,h))
     img, info = findFace(img)
     pError, vals = trackFace(me, info, w, pid, pError)
-    # mapImg = np.zeros((1000, 1000, 3), np.uint8)
-    # if(vals[0] == 20):
-    #     d = dInterval
-    #     a = 270
-    # elif(vals[0] == -20):
-    #     d = -dInterval
-    #     a = -90
-    # if(vals[1] != 0):
-    #     yaw += aInterval
-    #
-    # if(points[-1][0] != vals[2] or points[-1][1] != vals[3]):
-    #     points.append((vals[2], vals[3]))
-    # drawPoints(mapImg, points)
-    #print("Center", info[0], "Area", info[1])
     cv2.imshow("Output", img)
-    # cv2.imshow("Map", mapImg)
-    # time.sleep(interval)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         me.land()
         break
