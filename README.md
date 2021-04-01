@@ -6,7 +6,7 @@ Spring 2021
 Professor Chafic Bou-Saba
 
 ## Goals
-Remote connection to Tello drone via Raspberry Pi and VNC connection. The drone is equipped with a 720p front facing camera, 2 vertical-axis IR sensors, and rotor guards for each of the 4 propellors.
+Remote connection to Tello drone via Raspberry Pi and VNC connection. The drone is equipped with a 720p front facing camera, 2 vertical-axis IR sensors, and rotor guards for each of the 4 propellers.
 
 The drone can be queried for frames from the video stream. The frames are individually processed for facial and gesture detection. Based on the python logic, commands are returned to the drone.
 
